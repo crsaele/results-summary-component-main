@@ -1,0 +1,234 @@
+/* 
+
+
+    1. - CSS VARIABLES
+
+
+
+*/
+
+
+:root {
+    /* primary colors for project :) */
+    --lightRed: hsl(0, 100%, 67%);
+    --orangeYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+
+    /* gradients */
+    --lightSlateBlue: hsl(252, 100%, 67%);
+    --lightRoyalBlue: hsl(241, 81%, 54%);
+    --violetBlue: hsla(256, 72%, 46%, 1);
+    --persianBlue: hsla(241, 72%, 46%, 0);
+
+    /* neutral colors */
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+}
+
+
+
+/* 
+
+    2. - ELEMENTS
+
+
+*/
+
+
+/* universal selector (hits every element) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    /* tells it that the body element will occupy the 100% of the view height of the document */
+    height: 100vh;
+    background-color: var(--white);
+    display: flex;
+    /* align's whichever element descends from body element  */
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    /* adds the subtle gray shadow under the container*/
+    box-shadow: 0 6px 30px rgba(200, 200, 200, 0.5);
+}
+
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 17px;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+
+ul li {
+    list-style-type: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p {
+    font-size: 15px;
+    text-align: center;
+}
+
+button {
+    color: var(--white);
+    margin-top: 17px;
+    background-color: var(--darkGrayBlue);
+    padding: 15px 70px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9em;
+    border: none;
+}
+
+b {
+    color: #000000;
+}
+
+/*
+
+3. - ID'S
+
+
+*/
+
+
+#btn:hover {
+    background-image: linear-gradient(to bottom, var(--lightSlateBlue), var(--lightRoyalBlue));
+    cursor: pointer;
+}
+
+
+
+/* 
+
+
+4. - HELPER CLASSES
+
+
+*/
+
+
+/* helper class that flexes the result card and summary card */
+.flex-container {
+    display: flex;
+}
+
+
+.bold {
+    font-weight: bold;
+    color: var(--darkGrayBlue);
+}
+
+
+.result-card {
+    background-image: linear-gradient(to bottom, var(--lightSlateBlue), var(--lightRoyalBlue));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--white);
+    width: 270px;
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.result-card h2 {
+    color: var(--lightLavender);
+}
+
+/* circle class that draws a circle inside the result card */
+
+.circle {
+    width: 130px;
+    height: 130px;
+    color: var(--white);
+    padding-top: 25px;
+    border-radius: 50%;
+    /* background-color: var(--violetBlue); */
+    background-image: linear-gradient(to bottom, var(--lightSlateBlue), var(--lightRoyalBlue));
+}
+
+
+.summary-card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 0 15px 15px 0;
+    height: 350px;
+    box-shadow: 0 6px 30px rgba(200, 200, 200, 0.5);
+    width: 270px;
+}
+
+.reaction {
+    color: hsl(0, 100%, 67%);
+    background-color: hsl(0, 100%, 86%);
+}
+
+.memory {
+    color: hsl(39, 100%, 56%);
+    background-color: hsl(39, 100%, 89%);
+}
+
+.verbal {
+    color: hsl(166, 100%, 37%);
+    background-color: var(--lightLavender);
+}
+
+.visual {
+    color: hsl(234, 85%, 45%);
+    background-color: var(--paleBlue);
+}
+
+.reaction-icon,
+.memory-icon,
+.verbal-icon,
+.visual-icon {
+    float: left;
+}
+
+.score {
+    display: inline;
+    float: right;
+    color: #bbb9bd;
+}
+
+
+/*
+
+
+5. - RESPONSIVE DESIGN MEDIA QUERIES
+
+
+/*
+
+
+
+
+/* MOBILE DESIGN */
+
+@media only screen and (max-width: 560px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
